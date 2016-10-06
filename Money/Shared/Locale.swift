@@ -62,18 +62,12 @@ internal extension Locale {
 
     /// - returns: a String? for the currency code.
     var money_currencyCode: String {
-        guard #available(iOSApplicationExtension 10.0, OSXApplicationExtension 10.12, *) else {
-            return object(forKey: Key.currencyCode) as! String
-        }
-        return currencyCode
+        return currencyCode!
     }
 
     /// - returns: a String? for the currency symbol.
     var money_currencySymbol: String {
-        guard #available(iOSApplicationExtension 10.0, OSXApplicationExtension 10.12, *) else {
-            return object(forKey: Key.currencySymbol) as! String
-        }
-        return currencySymbol
+        return currencySymbol!
     }
 }
 
@@ -84,12 +78,12 @@ public extension Locale {
 
     /// - returns: a String? for the currency grouping separator.
     var currencyGroupingSeparator: String? {
-        return object(forKey: Key.groupingSeparator) as? String
+        return groupingSeparator
     }
 
     /// - returns: a String? for the currency decimal separator.
     var currencyDecimalSeparator: String? {
-        return object(forKey: Key.decimalSeparator) as? String
+        return decimalSeparator
     }
 }
 

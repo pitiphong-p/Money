@@ -27,3 +27,4 @@ Carthage/Build
 .ci/xcodebuild-data/*
 *.coverage.txt
 docs
+.DS_Store

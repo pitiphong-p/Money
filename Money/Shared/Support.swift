@@ -27,8 +27,15 @@
 
 import Foundation
 
-extension Int: Boolean {
-
+extension Int {
+  init(boolValue bool: Bool) {
+    switch bool {
+    case true:
+      self = 1
+    case false:
+      self = 0
+    }
+  }
     public var boolValue: Bool {
         switch self {
         case 0: return false
