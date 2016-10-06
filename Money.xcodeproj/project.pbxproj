@@ -94,10 +94,6 @@
 		65DEE3621BFA0F370043A718 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3331BFA0F370043A718 /* Money.swift */; };
 		65DEE3631BFA0F370043A718 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3331BFA0F370043A718 /* Money.swift */; };
 		65DEE3641BFA0F370043A718 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3331BFA0F370043A718 /* Money.swift */; };
-		65DEE3651BFA0F370043A718 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3341BFA0F370043A718 /* Support.swift */; };
-		65DEE3661BFA0F370043A718 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3341BFA0F370043A718 /* Support.swift */; };
-		65DEE3671BFA0F370043A718 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3341BFA0F370043A718 /* Support.swift */; };
-		65DEE3681BFA0F370043A718 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DEE3341BFA0F370043A718 /* Support.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,7 +184,6 @@
 		65DEE32C1BFA0F370043A718 /* NSDecimalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalExtensions.swift; sourceTree = "<group>"; };
 		65DEE32D1BFA0F370043A718 /* NSDecimalNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberExtensions.swift; sourceTree = "<group>"; };
 		65DEE3331BFA0F370043A718 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
-		65DEE3341BFA0F370043A718 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,7 +352,6 @@
 				65DEE3281BFA0F370043A718 /* Currency.swift */,
 				65579FB51C0228EB00C3F8C7 /* Locale.swift */,
 				65DEE3331BFA0F370043A718 /* Money.swift */,
-				65DEE3341BFA0F370043A718 /* Support.swift */,
 				65DEE3291BFA0F370043A718 /* Decimal */,
 			);
 			path = Shared;
@@ -796,7 +790,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DEE3651BFA0F370043A718 /* Support.swift in Sources */,
 				65579FB61C0228EB00C3F8C7 /* Locale.swift in Sources */,
 				65DEE3451BFA0F370043A718 /* DecimalNumberType.swift in Sources */,
 				65DEE3491BFA0F370043A718 /* NSDecimalExtensions.swift in Sources */,
@@ -830,7 +823,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DEE3661BFA0F370043A718 /* Support.swift in Sources */,
 				65DEE3461BFA0F370043A718 /* DecimalNumberType.swift in Sources */,
 				65DEE34A1BFA0F370043A718 /* NSDecimalExtensions.swift in Sources */,
 				65DEE34E1BFA0F370043A718 /* NSDecimalNumberExtensions.swift in Sources */,
@@ -847,7 +839,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DEE3671BFA0F370043A718 /* Support.swift in Sources */,
 				65DEE3471BFA0F370043A718 /* DecimalNumberType.swift in Sources */,
 				65DEE34B1BFA0F370043A718 /* NSDecimalExtensions.swift in Sources */,
 				65DEE34F1BFA0F370043A718 /* NSDecimalNumberExtensions.swift in Sources */,
@@ -879,7 +870,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DEE3681BFA0F370043A718 /* Support.swift in Sources */,
 				65DEE3481BFA0F370043A718 /* DecimalNumberType.swift in Sources */,
 				65DEE34C1BFA0F370043A718 /* NSDecimalExtensions.swift in Sources */,
 				65DEE3501BFA0F370043A718 /* NSDecimalNumberExtensions.swift in Sources */,

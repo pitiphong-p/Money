@@ -27,6 +27,9 @@
 
 import Foundation
 
+
+public typealias CurrencyFormatter = (NSDecimalNumber) -> String
+
 /**
  # CurrencyType
  This protocol defines the minimum interface needed for a 
@@ -54,11 +57,11 @@ public protocol CurrencyType: DecimalNumberBehaviorType {
     /// Default formatting style
     static var defaultFormattingStyle: NumberFormatter.Style { get }
     
-    static func formatted(withStyle: NumberFormatter.Style, andLocaleId: String) -> (NSDecimalNumber) -> String
+    static func makeFormaterWith(style: NumberFormatter.Style, localeId: String) -> CurrencyFormatter
 
-    static func formatted(withStyle: NumberFormatter.Style, andLocale: Locale) -> (NSDecimalNumber) -> String
+    static func makeFormaterWith(style: NumberFormatter.Style, locale: Locale) -> CurrencyFormatter
 
-    static func formatted(withStyle: NumberFormatter.Style, andLocalization: Localization) -> (NSDecimalNumber) -> String
+    static func makeFormaterWith(style: NumberFormatter.Style, localization: Localization) -> CurrencyFormatter
 }
 
 public extension CurrencyType {
@@ -93,10 +96,10 @@ public extension CurrencyType {
 
      - returns: a NSDecimalNumber -> String closure.
      */
-    static func formatted(withStyle style: NumberFormatter.Style, andLocaleId localeId: String) -> (NSDecimalNumber) -> String {
+    static func makeFormaterWith(style: NumberFormatter.Style, localeId: String) -> CurrencyFormatter {
         let id = "\(Locale.current.identifier)@currency=\(code)"
         let locale = Locale(identifier: Locale.canonicalIdentifier(from: id))
-        return formatted(withStyle: style, andLocale: locale)
+        return makeFormaterWith(style: style, locale: locale)
     }
 
     /**
@@ -104,9 +107,9 @@ public extension CurrencyType {
      
      - returns: a NSDecimalNumber -> String closure
     */
-    static func formatted(withStyle style: NumberFormatter.Style, andLocale tmp: Locale) -> (NSDecimalNumber) -> String {
+    static func makeFormaterWith(style: NumberFormatter.Style, locale: Locale) -> CurrencyFormatter {
 
-        let id = "\(tmp.identifier)@currency=\(code)"
+        let id = "\(locale.identifier)@currency=\(code)"
         let locale = Locale(identifier: Locale.canonicalIdentifier(from: id))
 
         let formatter = NumberFormatter()
@@ -124,10 +127,10 @@ public extension CurrencyType {
 
      - returns: a NSDecimalNumber -> String closure.
      */
-    static func formatted(withStyle style: NumberFormatter.Style, andLocalization localization: Localization) -> (NSDecimalNumber) -> String {
+    static func makeFormaterWith(style: NumberFormatter.Style, localization: Localization) -> CurrencyFormatter {
         let id = "\(localization.localeIdentifier)@currency=\(code)"
         let locale = Locale(identifier: Locale.canonicalIdentifier(from: id))
-        return formatted(withStyle: style, andLocale: locale)
+        return makeFormaterWith(style: style, locale: locale)
     }
 }
 

@@ -89,8 +89,8 @@ public extension MoneyType where DecimalStorageType == NSDecimalNumber {
      - parameter style: the `NSNumberFormatterStyle` to use.
      - returns: a localized and formatted string for the money amount.
      */
-    func formatted(withStyle style: NumberFormatter.Style) -> String {
-        return Currency.formatted(withStyle: style, andLocaleId: Locale.current.identifier)(amount)
+    func format(withStyle style: NumberFormatter.Style) -> String {
+        return Currency.makeFormaterWith(style: style, localeId: Locale.current.identifier)(amount)
     }
 
     /**
@@ -109,8 +109,8 @@ public extension MoneyType where DecimalStorageType == NSDecimalNumber {
      - parameter locale: a `Locale` value
      - returns: a localized and formatted string for the money amount.
      */
-    func formatted(withStyle style: NumberFormatter.Style, andLocalization localization: Localization) -> String {
-        return Currency.formatted(withStyle: style, andLocalization: localization)(amount)
+    func formatWith(style: NumberFormatter.Style, localization: Localization) -> String {
+        return Currency.makeFormaterWith(style: style, localization: localization)(amount)
     }
 }
 
@@ -289,7 +289,7 @@ extension _Money: CustomStringConvertible {
      NSNumberFormatterStyle.CurrencyStyle.
     */
     public var description: String {
-        return formatted(withStyle: C.defaultFormattingStyle)
+        return format(withStyle: C.defaultFormattingStyle)
     }
 }
 
